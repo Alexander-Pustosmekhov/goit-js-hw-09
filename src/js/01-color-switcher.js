@@ -8,6 +8,8 @@ let intervalId = null;
 buttonStartRef.addEventListener('click', startInterval);
 buttonStopRef.addEventListener('click', stopInterval);
 
+buttonStopRef.setAttribute('disabled', 'disabled');
+
 // Functions
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
