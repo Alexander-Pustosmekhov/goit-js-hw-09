@@ -4,11 +4,11 @@ const buttonStopRef = document.querySelector('button[data-stop]');
 const bodyRef = document.querySelector('body');
 let intervalId = null;
 
+buttonStopRef.setAttribute('disabled', 'disabled');
+
 // Event listeners
 buttonStartRef.addEventListener('click', startInterval);
 buttonStopRef.addEventListener('click', stopInterval);
-
-buttonStopRef.setAttribute('disabled', 'disabled');
 
 // Functions
 function getRandomHexColor() {
@@ -29,7 +29,7 @@ function stopInterval() {
   clearInterval(intervalId);
 }
 
-function changeAtributes(buttonSet, buttonRem) {
-  buttonSet.setAttribute('disabled', 'disabled');
-  buttonRem.removeAttribute('disabled', 'disabled');
+function changeAtributes(firstButton, secondButton) {
+  firstButton.setAttribute('disabled', 'disabled');
+  secondButton.removeAttribute('disabled', 'disabled');
 }
