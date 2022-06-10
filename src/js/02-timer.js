@@ -18,6 +18,7 @@ const options = {
   onClose(date) {
     if (date[0] < new Date()) {
       Notify.warning('Please choose a date in the future');
+      buttonStart.setAttribute('disabled', 'disabled');
     } else {
       buttonStart.removeAttribute('disabled', 'disabled');
       userSelectDates = date;
